@@ -1,6 +1,7 @@
 ﻿  using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+  using System.Linq;
+  using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -10,7 +11,7 @@ public class SortedCreatedAssets : MonoBehaviour
 
     private void Start()
     {
-        SortWaitToComplete(_labels);
+        SortWaitToComplete(_labels.ToList());
     }
 
     private async Task SortWaitToComplete(List<string> labels)
